@@ -1,0 +1,10 @@
+.heading {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.accent {
+  color: #6b6b6b;
+  font-weight: 600;
+}
