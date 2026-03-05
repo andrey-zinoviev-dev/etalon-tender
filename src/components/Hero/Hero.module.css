@@ -1,0 +1,87 @@
+ .heroContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000000;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.stats {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 620px;
+  padding: 0 72px 48px;
+  gap: 24px;
+  background-image: url("/etalon-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.statCard {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 20px 24px;
+}
+
+.statValue {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.statLabel {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #4a4a4a;
+}
+
+@media (max-width: 1024px) {
+  .stats {
+    padding-inline: 40px;
+    gap: 16px;
+  }
+
+  .statValue {
+    font-size: 18px;
+  }
+
+  .statLabel {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroImageWrapper {
+    border-radius: 24px;
+  }
+
+  .stats {
+    flex-direction: column;
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    padding-inline: 16px;
+  }
+}
+

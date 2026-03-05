@@ -1,6 +1,7 @@
 import { SectionDescriptor } from "@/components/SectionDescriptor";
 import { SectionHeading } from "@/components/SectionHeading";
 import styles from "./ServicesSection.module.css";
+import { Container } from "../Container";
 
 const SERVICES = [
   { label: "Генеральный подряд и государственные комиссии", description: "Берем на себя полное управление объектом. Координируем работу субподрядчиков, контролируем ГПР и сдаем здание госкомиссии." },
@@ -12,7 +13,39 @@ const SERVICES = [
 export function ServicesSection() {
   return (
     <section className={styles.section} aria-labelledby="services-heading">
-      <div className={styles.wrapper}>
+      <Container className={styles.container}>
+        <div className={styles.wrapper}>
+          <div>
+            <SectionDescriptor
+              variant="dark"
+              label="Наши направления"
+              className={styles.descriptor}
+            />
+            <SectionHeading
+              id="services-heading"
+              className={styles.headline}
+              title="Системный подход к проектированию и строительству объектов"
+              accent="любой категории сложности"
+            />
+          </div>
+          <ul className={styles.servicesList} aria-label="Перечень услуг">
+          {SERVICES.map((service, index) => (
+            <li key={index} className={styles.serviceItem}>
+              <span className={styles.serviceNumber}>
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className={styles.serviceContent}>
+                <span className={styles.serviceTitle}>{service.label}</span>
+                <span className={styles.serviceDescription}>
+                  {service.description}
+                </span>
+              </div>
+            </li>
+            ))}
+          </ul>
+        </div>
+      </Container>
+      {/* <div className={styles.wrapper}>
         <SectionDescriptor
           variant="dark"
           label="Наши направления"
@@ -27,12 +60,19 @@ export function ServicesSection() {
         <ul className={styles.servicesList} aria-label="Перечень услуг">
           {SERVICES.map((service, index) => (
             <li key={index} className={styles.serviceItem}>
-              <span className={styles.serviceName}>{service.label}</span>
-              <span className={styles.serviceDescription}>{service.description}</span>
+              <span className={styles.serviceNumber}>
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className={styles.serviceContent}>
+                <span className={styles.serviceTitle}>{service.label}</span>
+                <span className={styles.serviceDescription}>
+                  {service.description}
+                </span>
+              </div>
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </section>
   );
 }
