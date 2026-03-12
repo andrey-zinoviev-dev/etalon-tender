@@ -1,0 +1,17 @@
+.preContacts {
+    padding: 0 0 72px 0;
+}
+
+.preContactsContent {
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.preContactsTitle {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 400;
+}

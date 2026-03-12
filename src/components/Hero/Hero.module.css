@@ -41,6 +41,7 @@
 }
 
 .statValue {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;

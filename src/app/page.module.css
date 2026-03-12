@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #FFFFFF;
   /* height: 100svh; */
   /* background-color: #000; */
   /* height: 100svh; */
@@ -15,7 +16,7 @@
 
 .main {
   width: 100%;
-  padding-block: 80px;
+  /* padding-block: 80px; */
 }
 
 .heroContainer {
@@ -60,6 +61,7 @@
 }
 
 .statValue {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;

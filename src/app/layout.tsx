@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Golos_Text, IBM_Plex_Sans } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
+
+config.autoAddCss = false;
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const golosText = Golos_Text({
+  variable: "--font-heading",
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-body",
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${golosText.variable} ${ibmPlexSans.variable}`}>
         <Header />
         {children}
         <Footer />

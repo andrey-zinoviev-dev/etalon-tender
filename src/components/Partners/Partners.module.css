@@ -8,9 +8,9 @@
   gap: 40px;
 }
 
-.header {
+/* .header {
   max-width: 640px;
-}
+} */
 
 .grid {
   display: grid;

@@ -1,5 +1,4 @@
-import { SectionDescriptor } from "@/components/SectionDescriptor";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionTitleWrapper } from "@/components/SectionTitleWrapper";
 import styles from "./ServicesSection.module.css";
 import { Container } from "../Container";
 
@@ -15,64 +14,32 @@ export function ServicesSection() {
     <section className={styles.section} aria-labelledby="services-heading">
       <Container className={styles.container}>
         <div className={styles.wrapper}>
-          <div>
-            <SectionDescriptor
-              variant="dark"
-              label="Наши направления"
-              className={styles.descriptor}
-            />
-            <SectionHeading
-              id="services-heading"
-              className={styles.headline}
-              title="Системный подход к проектированию и строительству объектов"
-              accent="любой категории сложности"
-            />
-          </div>
+          <SectionTitleWrapper
+            descriptorLabel="Наши направления"
+            descriptorVariant="dark"
+            descriptorClassName={styles.descriptor}
+            headingId="services-heading"
+            headingClassName={styles.headline}
+            headingTitle="Системный подход к проектированию и строительству объектов"
+            headingAccent="любой категории сложности"
+          />
           <ul className={styles.servicesList} aria-label="Перечень услуг">
-          {SERVICES.map((service, index) => (
-            <li key={index} className={styles.serviceItem}>
-              <span className={styles.serviceNumber}>
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div className={styles.serviceContent}>
-                <span className={styles.serviceTitle}>{service.label}</span>
-                <span className={styles.serviceDescription}>
-                  {service.description}
+            {SERVICES.map((service, index) => (
+              <li key={index} className={styles.serviceItem}>
+                <span className={styles.serviceNumber}>
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-              </div>
-            </li>
+                <div className={styles.serviceContent}>
+                  <span className={styles.serviceTitle}>{service.label}</span>
+                  <span className={styles.serviceDescription}>
+                    {service.description}
+                  </span>
+                </div>
+              </li>
             ))}
           </ul>
         </div>
       </Container>
-      {/* <div className={styles.wrapper}>
-        <SectionDescriptor
-          variant="dark"
-          label="Наши направления"
-          className={styles.descriptor}
-        />
-        <SectionHeading
-          id="services-heading"
-          className={styles.headline}
-          title="Системный подход к проектированию и строительству объектов"
-          accent="любой категории сложности"
-        />
-        <ul className={styles.servicesList} aria-label="Перечень услуг">
-          {SERVICES.map((service, index) => (
-            <li key={index} className={styles.serviceItem}>
-              <span className={styles.serviceNumber}>
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div className={styles.serviceContent}>
-                <span className={styles.serviceTitle}>{service.label}</span>
-                <span className={styles.serviceDescription}>
-                  {service.description}
-                </span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div> */}
     </section>
   );
 }

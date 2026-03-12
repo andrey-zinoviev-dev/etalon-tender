@@ -1,10 +1,10 @@
-.root {
+.sectionDescriptor {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.icon {
+.sectionDescriptorIcon {
   width: 8px;
   height: 8px;
   min-width: 8px;
@@ -13,7 +13,7 @@
   flex-shrink: 0;
 }
 
-.label {
+.sectionDescriptorLabel {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -22,10 +22,10 @@
 }
 
 /* When used on dark background (e.g. black section) */
-.rootDark .icon {
+.sectionDescriptorDark .sectionDescriptorIcon {
   background-color: #5a5a5a;
 }
 
-.rootDark .label {
+.sectionDescriptorDark .sectionDescriptorLabel {
   color: #9a9a9a;
 }

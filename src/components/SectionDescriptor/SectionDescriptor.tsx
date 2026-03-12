@@ -14,10 +14,10 @@ export function SectionDescriptor({
 }: SectionDescriptorProps) {
   return (
     <div
-      className={`${styles.root} ${variant === "dark" ? styles.rootDark : ""} ${className ?? ""}`}
+      className={`${styles.sectionDescriptor} ${variant === "dark" ? styles.sectionDescriptorDark : ""} ${className ?? ""}`}
     >
-      <span className={styles.icon} aria-hidden />
-      <span className={styles.label}>{label}</span>
+      <span className={styles.sectionDescriptorIcon} aria-hidden />
+      <span className={styles.sectionDescriptorLabel}>{label}</span>
     </div>
   );
 }
