@@ -150,9 +150,13 @@
   .heroDescription {
     text-align: left;
   }
-  
+
   .stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statCard {
+    height: 100%;
   }
 }
 /* @media (max-width: 480px) {
