@@ -113,7 +113,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
   .hero {
     padding: 48px 0 0 0;
   }
@@ -146,7 +146,11 @@
   }
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 767px) {
+  .heroDescription {
+    text-align: left;
+  }
+  
   .stats {
     grid-template-columns: 1fr;
   }

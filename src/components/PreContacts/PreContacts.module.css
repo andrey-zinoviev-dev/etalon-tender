@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
     .preContacts {
         padding: 48px 0;
     }

@@ -41,7 +41,7 @@
     color: #dbdbdb;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
     .footer {
         padding: 24px 0;
     }
