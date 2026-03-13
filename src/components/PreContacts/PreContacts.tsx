@@ -6,7 +6,7 @@ export default function PreContacts() {
         <section className={styles.preContacts}>
             <Container>
                 <div className={styles.preContactsContent}>
-                    <h2 className={styles.preContactsTitle}>ГОТОВЫ ОБСУДИТЬ ВАШ ПРОЕКТ И УЗНАТЬ ПОДРОБНЕЕ О ВАШИХ ПРОЕКТАХ</h2>
+                    <h2 className={styles.preContactsTitle}>ГОТОВЫ ОБСУДИТЬ ВАШ ПРОЕКТ И УЗНАТЬ ПОДРОБНЕЕ О ВАШИХ ИДЕЯХ</h2>
                 </div>
             </Container>
         </section>

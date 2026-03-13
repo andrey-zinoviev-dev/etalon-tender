@@ -1,5 +1,5 @@
 .preContacts {
-    padding: 0 0 72px 0;
+    padding: 72px 0;
 }
 
 .preContactsContent {
@@ -14,4 +14,20 @@
     font-size: 48px;
     text-align: center;
     font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .preContactsTitle {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .preContacts {
+        padding: 48px 0;
+    }
+    .preContactsTitle {
+        text-align: left;
+        /* font-size: 24px; */
+    }
 }

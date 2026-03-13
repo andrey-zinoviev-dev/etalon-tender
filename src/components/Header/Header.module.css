@@ -53,6 +53,23 @@
   white-space: nowrap;
 }
 
+.ctaButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  /* padding: 16px 32px;
+    border-radius: 999px;
+    border: none;
+    background: #f5c655;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600; */
+  cursor: pointer;
+}
+
 /* .cta {
   padding: 10px 18px;
   border-radius: 999px;

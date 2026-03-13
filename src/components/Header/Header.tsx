@@ -25,6 +25,9 @@ export function Header() {
             Контакты
           </Link>
         </nav>
+        <button className={styles.ctaButton}>
+          Заказать консультацию
+        </button>
 
         {/* <div className={styles.actions}>
           <a href="tel:+78000000000" className={styles.phone}>

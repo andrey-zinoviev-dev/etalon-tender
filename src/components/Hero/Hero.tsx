@@ -5,8 +5,11 @@ export function Hero() {
   return (
     <section className={styles.hero}>
       <Container className={styles.heroContainer}>
-        <div>
-          <h1 className={styles.heroTitle}>Эталон</h1>
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroTitle}>Проектируем здания, проводим тендеры и работаем с НДФЛ.</h1>
+            <p className={styles.heroDescription}>Берем на себя полную юридическую и техническую ответственность за сдачу объектов в срок.</p>
+          </div>
           <div className={styles.stats}>
             <div className={styles.statCard}>
               <div className={styles.statValue}>550 000 м²</div>

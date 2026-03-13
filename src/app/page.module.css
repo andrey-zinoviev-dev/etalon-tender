@@ -75,9 +75,9 @@
 }
 
 @media (max-width: 1024px) {
-  .main {
+  /* .main {
     padding-block: 48px;
-  }
+  } */
 
   .stats {
     padding-inline: 40px;
@@ -109,9 +109,9 @@
     align-items: flex-start;
   }
 
-  .main {
+  /* .main {
     padding-block: 32px;
-  }
+  } */
 
   .stats {
     padding-inline: 16px;

@@ -8,7 +8,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Contacts from "@/components/Contacts";
 import PreContacts from "@/components/PreContacts";
-import CTA from "@/components/CTA";
+// import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       {/* <Header /> */}
       <main className={styles.main}>
         <Hero />
-        <CTA />
+        {/* <CTA /> */}
         {/* <section className={styles.aboutUs}>
           <Container>
             <div className={styles.aboutUsContent}>
@@ -27,7 +27,7 @@ export default function Home() {
 
         <ServicesSection />
         <Partners />
-        {/* <Projects /> */}
+        <Projects />
         <PreContacts />
         <Contacts />
       </main>

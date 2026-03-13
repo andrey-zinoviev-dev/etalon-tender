@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   /* background-color: #000000; */
-  padding-block: 64px 72px;
+  padding-block: 72px 0;
 }
 
 .wrapper {
@@ -72,31 +72,33 @@
 
 @media (max-width: 1024px) {
   .section {
-    padding-block: 48px 56px;
+    /* padding-block: 48px 56px; */
   }
 
   .wrapper {
-    padding-inline: 24px;
-    gap: 0 32px;
+    flex-direction: column;
+    gap: 48px;
+    /* padding-inline: 24px;
+    gap: 0 32px; */
   }
 }
 
 @media (max-width: 640px) {
   .wrapper {
     grid-template-columns: 1fr;
-    padding-inline: 16px;
+    /* padding-inline: 16px; */
   }
 
   .serviceItem {
-    padding-block: 16px;
+    padding-block: 12px;
   }
 
   .serviceNumber {
-    margin-right: 16px;
+    margin-right: 12px;
     font-size: 24px;
   }
 
   .serviceTitle {
-    font-size: 18px;
+    font-size: 20px;
   }
 }

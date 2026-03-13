@@ -11,3 +11,9 @@
   font-weight: 400;
   /* font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif; */
 }
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+  }
+}
