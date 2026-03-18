@@ -10,13 +10,14 @@
 
 .projectsList {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    /* row-gap: 48px; */
 }
 
 .projectItem {
     display: grid;
-    gap: 12px;
+    gap: 24px;
 }
 
 .projectImageWrapper {
@@ -34,11 +35,11 @@
 
 .projectStatus {
     position: absolute;
-        background-color: #fff;
-        padding: 4px 12px;
-        border-radius: 24px;
-        top: 10px;
-        left: 5px;
+    background-color: #fff;
+    padding: 4px 12px;
+    border-radius: 24px;
+    top: 15px;
+    left: 20px;
 }
 
 .projectImage {
@@ -48,20 +49,28 @@
     object-fit: cover;
 }
 
+.projectInfo {
+    display: grid;
+    gap: 24px;
+    max-width: 540px;
+}
+
 .projectTitle {
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 420px;
+    min-height: 58px;
     /* line-height: 1.2;
     color: #1C1C1C; */
 }
 
-.projectInfo {
-    display: grid;
-    gap: 4px;
-}
-
 .projectInfoTitle {
     font-weight: 500;
+}
+
+.projectInfoContent {
+    display: grid;
+    gap: 12px;
 }
 
 .projectCategories {
@@ -72,7 +81,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    min-height: 70px;
+    /* min-height: 70px; */
 }
 
 .projectCategoryItem {
@@ -81,16 +90,45 @@
     border: 1px solid black;
 }
 
+.projectTarget {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 420px;
+}
+
 @media screen and (max-width: 1024px) {
     .projectsList {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media screen and (max-width: 768px) {
+    .projectTitle {
+        font-size: 24px;
+    }
+    .projectTarget {
+        font-size: 16px;
+    }
+    /* .projectsList {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    } */
+}
+
 @media screen and (max-width: 767px) {
     .projectsList {
         grid-template-columns: 1fr;
         gap: 48px;
+    }
+
+    .projectInfoContent {
+        display: grid;
+        max-width: 360px;
+    }
+
+    .projectTitle {
+        min-height: 0;
+        /* font-size: 20px; */
     }
 
     .projectCategories {

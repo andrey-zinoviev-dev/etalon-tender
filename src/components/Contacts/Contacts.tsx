@@ -6,13 +6,15 @@ export default function Contacts() {
         <section className={styles.contacts}>
             <Container>
                 <div className={styles.contactsContent}>
-                    <SectionTitleWrapper
+                    {/* <SectionTitleWrapper
                         descriptorLabel="Сотрудничество"
                         descriptorVariant="dark"
                         descriptorClassName={styles.descriptor}
-                        headingTitle="Контакты и связь с нами,"
-                        headingAccent="чтобы сотрудничество стало реальностью"
-                    />
+                        headingTitle=""
+                        headingAccent=""
+                    /> */}
+
+                    <h2 className={styles.contactsTitle}>Готовы обсудить ваш проект и узнать подробнее о ваших идеях</h2>
 
                     <ul className={styles.contactsList}>
                         <li className={styles.contactsItem}>
@@ -45,6 +47,10 @@ export default function Contacts() {
                         <li className={styles.contactsItem}>
                             <span className={styles.contactsItemTitle}>Офис</span>
                             <div className={styles.contactsItemContent}>
+                                {/* <div className={styles.contactsItemContentItemLinks}>
+                                    <span>Электрический пер, д. 3/10 стр. 1</span>
+                                    <span>Москва, 123557</span>
+                                </div> */}
                                 <span>Электрический пер, д. 3/10 стр. 1</span>
                                 <span>Москва, 123557</span>
                             </div>
@@ -52,6 +58,10 @@ export default function Contacts() {
                         <li className={styles.contactsItem}>
                             <span className={styles.contactsItemTitle}>Режим работы</span>
                             <div className={styles.contactsItemContent}>
+                                {/* <div className={styles.contactsItemContentItemLinks}>
+                                    <span>Пн-Пт: 09:00 - 18:00</span>
+                                    <span>Сб-Вс: Выходной</span>
+                                </div> */}
                                 <span>Пн-Пт: 09:00 - 18:00</span>
                                 <span>Сб-Вс: Выходной</span>
                             </div>

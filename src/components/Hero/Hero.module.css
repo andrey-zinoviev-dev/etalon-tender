@@ -28,7 +28,7 @@
 }
 
 .heroDescription {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #000000;
   max-width: 360px;
@@ -65,22 +65,22 @@
 
 .statValue {
   font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #000000;
 }
 
 .statLabel {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.4;
   color: #4a4a4a;
 }
 
 @media (max-width: 1024px) {
   .stats {
-    padding-inline: 40px;
-    gap: 16px;
+    padding-inline: 24px;
+    /* gap: 16px; */
   }
 
   .statValue {
@@ -88,7 +88,7 @@
   }
 
   .statLabel {
-    font-size: 12px;
+    /* font-size: 12px; */
   }
 }
 
@@ -102,7 +102,7 @@
   }
 
   .heroDescription {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .stats {
@@ -110,10 +110,11 @@
     /* flex-direction: column; */
     padding-inline: 24px;
     padding-bottom: 24px;
+    gap: 12px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .hero {
     padding: 48px 0 0 0;
   }
@@ -124,11 +125,11 @@
   }
   .heroTitle {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
   }
   .heroDescription {
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .stats {
@@ -136,7 +137,7 @@
     background-image: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
 
@@ -144,9 +145,21 @@
     background-color: #F7F7F7;
     padding: 12px;
   }
+
+  .statCard:last-of-type {
+    grid-column: 1 / -1;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .heroContent {
+    gap: 48px;
+  }
+
+  .heroText {
+    gap: 24px;
+  }
+
   .heroDescription {
     text-align: left;
   }
@@ -158,6 +171,9 @@
   .statCard {
     height: 100%;
   }
+        .statCard:last-of-type {
+          grid-column: auto;
+        }
 }
 /* @media (max-width: 480px) {
   .stats {

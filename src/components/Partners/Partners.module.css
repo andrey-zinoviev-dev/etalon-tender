@@ -19,12 +19,13 @@
   border-radius: 4px;
   overflow: hidden;
   width: 100%;
-  max-width: 720px;
+  max-width: 540px;
 }
 
 .cell {
   background-color: #f7f7f7;
-  min-height: 120px;
+  /* min-height: 120px; */
+  min-height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;

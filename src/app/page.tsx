@@ -28,7 +28,7 @@ export default function Home() {
         <ServicesSection />
         <Partners />
         <Projects />
-        <PreContacts />
+        {/* <PreContacts /> */}
         <Contacts />
       </main>
     </div>
