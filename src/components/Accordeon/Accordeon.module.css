@@ -1,0 +1,100 @@
+.accordeonButton {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  gap: 0;
+}
+
+.accordeonButtonRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.accordeonButtonTitle {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.accordeonButtonIcon {
+  opacity: 0.85;
+  transition: transform 260ms ease;
+  flex-shrink: 0;
+}
+
+.accordeonButton[data-open="true"] .accordeonButtonIcon {
+  transform: rotate(180deg);
+}
+
+.accordeonButtonDescriptionPanel {
+  /* Smooth height animation without guessing max-height */
+  display: grid;
+  grid-template-rows: 0fr;
+  min-height: 0;
+  overflow: hidden;
+
+  transition: grid-template-rows 260ms ease;
+}
+
+.accordeonButton[data-open="true"] .accordeonButtonDescriptionPanel {
+  grid-template-rows: 1fr;
+}
+
+.accordeonButtonDescriptionText {
+  display: block;
+  /* Important for the collapsed state: remove spacing when closed */
+  padding-top: 0;
+  min-height: 0;
+
+  font-size: 18px;
+  line-height: 1.5;
+  opacity: 0;
+
+  transform: translateY(-6px);
+  transition:
+    opacity 180ms ease,
+    transform 260ms ease;
+  will-change: opacity, transform;
+}
+
+.accordeonButton[data-open="true"] .accordeonButtonDescriptionText {
+  opacity: 0.8; /* matches your section description style */
+  transform: translateY(0);
+
+  transition-delay: 60ms; /* stagger micro-animation */
+
+  /* Add spacing only when open */
+  padding-top: 24px;
+}
+
+.accordeonButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordeonButtonDescriptionPanel {
+    transition: none;
+  }
+
+  .accordeonButtonDescriptionText {
+    transition: none;
+  }
+
+  .accordeonButtonIcon {
+    transition: none;
+  }
+}

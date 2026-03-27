@@ -1,5 +1,5 @@
 import { Container } from "../Container";
-import { SectionTitleWrapper } from "@/components/SectionTitleWrapper";
+// import { SectionTitleWrapper } from "@/components/SectionTitleWrapper";
 import { projects } from "@/utils";
 import Image from "next/image";
 import styles from "./Projects.module.css";
@@ -9,12 +9,12 @@ export default function Projects() {
     <section className={styles.projects}>
       <Container>
         <div className={styles.projectsContent}>
-          <SectionTitleWrapper
+          {/* <SectionTitleWrapper
             descriptorLabel="Наши проекты"
             descriptorVariant="dark"
             headingTitle="Наши проекты"
             headingAccent="любой категории сложности"
-          />
+          /> */}
 
           <ul className={styles.projectsList}>
             {projects.map((project) => (

@@ -23,7 +23,7 @@ export type SectionTitleWrapperProps = {
 
 /**
  * Wrapper that combines SectionDescriptor + SectionHeading.
- * Layout: flex column, max-width 420px, gap 24px.
+ * Layout: flex column, max-width 480px, gap 24px.
  */
 export function SectionTitleWrapper({
   descriptorLabel,

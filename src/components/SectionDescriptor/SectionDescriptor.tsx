@@ -16,7 +16,7 @@ export function SectionDescriptor({
     <div
       className={`${styles.sectionDescriptor} ${variant === "dark" ? styles.sectionDescriptorDark : ""} ${className ?? ""}`}
     >
-      <span className={styles.sectionDescriptorIcon} aria-hidden />
+      {/* <span className={styles.sectionDescriptorIcon} aria-hidden /> */}
       <span className={styles.sectionDescriptorLabel}>{label}</span>
     </div>
   );

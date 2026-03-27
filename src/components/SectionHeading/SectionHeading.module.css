@@ -1,19 +1,25 @@
 .heading {
   margin: 0;
   font-weight: 400;
-  line-height: 1.2;
-  font-size: 28px;
+  line-height: 1;
+  font-size: 72px;
+  text-transform: uppercase;
+  grid-column: 1 / 6;
   /* font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif; */
 }
 
 .accent {
-  color: #787975;
-  font-weight: 400;
+  /* color: #787975; */
+  font-weight: 500;
   /* font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif; */
 }
 
 @media screen and (max-width: 768px) {
   .heading {
-    font-size: 24px;
+    font-size: 48px;
+    grid-column: 1 / -1;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    padding: 4px 0;
   }
 }

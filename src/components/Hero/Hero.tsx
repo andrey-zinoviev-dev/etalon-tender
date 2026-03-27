@@ -10,7 +10,7 @@ export function Hero() {
             <h1 className={styles.heroTitle}>Проектируем здания, проводим тендеры и работаем с НДФЛ.</h1>
             <p className={styles.heroDescription}>Берем на себя полную юридическую и техническую ответственность за сдачу объектов в срок.</p>
           </div>
-          <div className={styles.stats}>
+          {/* <div className={styles.stats}>
             <div className={styles.statCard}>
               <div className={styles.statValue}>550 000 м²</div>
               <div className={styles.statLabel}>
@@ -38,7 +38,7 @@ export function Hero() {
                 Реализованных контрактов по ФЗ-44 и ФЗ-223
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </section>

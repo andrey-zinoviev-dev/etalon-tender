@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Golos_Text, IBM_Plex_Sans } from "next/font/google";
-// import { config } from "@fortawesome/fontawesome-svg-core";
-// import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 
-// config.autoAddCss = false;
+config.autoAddCss = false;
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
+import { FontAwesomeSetup } from "@/components/FontAwesomeSetup";
 
 const golosText = Golos_Text({
   variable: "--font-heading",
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${golosText.variable} ${ibmPlexSans.variable}`}>
+        <FontAwesomeSetup />
         <Header />
         {children}
         <Footer />

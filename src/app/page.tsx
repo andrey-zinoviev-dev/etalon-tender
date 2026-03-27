@@ -15,7 +15,7 @@ export default function Home() {
     <div className={styles.page}>
       {/* <Header /> */}
       <main className={styles.main}>
-        <Hero />
+        {/* <Hero /> */}
         {/* <CTA /> */}
         {/* <section className={styles.aboutUs}>
           <Container>
