@@ -1,14 +1,19 @@
 import { Container } from "../Container";
+import { SectionGrid, sectionGrid } from "../SectionGrid";
 // import { SectionTitleWrapper } from "@/components/SectionTitleWrapper";
 import { projects } from "@/utils";
 import Image from "next/image";
 import styles from "./Projects.module.css";
+import { SectionDescriptor } from "../SectionDescriptor";
+import { SectionHeading } from "../SectionHeading";
 
 export default function Projects() {
   return (
     <section className={styles.projects}>
       <Container>
-        <div className={styles.projectsContent}>
+        <SectionGrid>
+        <SectionDescriptor label="04_PROJECTS" variant="dark" />
+          <SectionHeading className={styles.headline} title="Проекты" accent="" />
           {/* <SectionTitleWrapper
             descriptorLabel="Наши проекты"
             descriptorVariant="dark"
@@ -16,7 +21,7 @@ export default function Projects() {
             headingAccent="любой категории сложности"
           /> */}
 
-          <ul className={styles.projectsList}>
+          <ul className={[sectionGrid.fullSpan, styles.projectsList].join(" ")}>
             {projects.map((project) => (
               <li className={styles.projectItem} key={project.id}>
                 <div className={styles.projectImageWrapper}>
@@ -41,7 +46,10 @@ export default function Projects() {
               </li>
             ))}
           </ul>
-        </div>
+        {/* <div className={`${sectionGrid.fullSpan} ${styles.projectsContent}`}>
+          
+        </div> */}
+        </SectionGrid>
       </Container>
     </section>
   );

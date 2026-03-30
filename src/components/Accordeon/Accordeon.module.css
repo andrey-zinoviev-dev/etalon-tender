@@ -15,13 +15,14 @@
 }
 
 .accordeonButtonRow {
-  display: flex;
+  display: grid;
+  grid-template-columns: 35px repeat(2, 1fr) 30px;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  column-gap: 48px;
 }
 
 .accordeonButtonTitle {
+  grid-column: 2 / 4;
   font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
   font-size: 24px;
   line-height: 1.2;
@@ -29,13 +30,15 @@
 }
 
 .accordeonButtonIcon {
+  grid-column: 4 / -1;
+  justify-self: end;
   opacity: 0.85;
   transition: transform 260ms ease;
-  flex-shrink: 0;
+  font-size: 20px;
 }
 
 .accordeonButton[data-open="true"] .accordeonButtonIcon {
-  transform: rotate(180deg);
+  transform: rotate(45deg);
 }
 
 .accordeonButtonDescriptionPanel {
@@ -52,7 +55,16 @@
   grid-template-rows: 1fr;
 }
 
+.accordeonButtonDescriptionInner {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 35px repeat(2, 1fr) 30px;
+  column-gap: 48px;
+}
+
 .accordeonButtonDescriptionText {
+  /* max-width: 540px; */
+  grid-column: 2 / 4;
   display: block;
   /* Important for the collapsed state: remove spacing when closed */
   padding-top: 0;
@@ -83,6 +95,12 @@
   outline: 2px solid currentColor;
   outline-offset: 6px;
   border-radius: 4px;
+}
+
+.accordeonButtonIndex {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

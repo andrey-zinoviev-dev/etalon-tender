@@ -1,6 +1,6 @@
 .projects {
-    padding: 72px 0;
-    background-color: #F7F7F7;
+    /* padding: 72px 0; */
+    /* background-color: #F7F7F7; */
 }
 
 .projectsContent {
@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    margin: 48px 0 0 0;
     /* row-gap: 48px; */
 }
 

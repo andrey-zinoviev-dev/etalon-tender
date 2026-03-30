@@ -2,15 +2,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Accordeon.module.css";
 import { useId, useState } from "react";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 interface AccordeonProps {
   title: string;
   description: string;
+  index: number;
 //   icon: string;
 }
 
-export default function Accordeon({ title, description }: AccordeonProps) {
+export default function Accordeon({ title, description, index }: AccordeonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const panelId = useId();
 
@@ -24,9 +25,10 @@ export default function Accordeon({ title, description }: AccordeonProps) {
       data-open={isOpen}
     >
       <span className={styles.accordeonButtonRow}>
+        <span className={styles.accordeonButtonIndex}>{`0${index}`}</span>
         <span className={styles.accordeonButtonTitle}>{title}</span>
         <FontAwesomeIcon
-          icon={faChevronDown}
+          icon={faPlus}
           className={styles.accordeonButtonIcon}
           aria-hidden
         />
@@ -39,8 +41,10 @@ export default function Accordeon({ title, description }: AccordeonProps) {
         aria-hidden={!isOpen}
         className={styles.accordeonButtonDescriptionPanel}
       >
-        <span className={styles.accordeonButtonDescriptionText}>
-          {description}
+        <span className={styles.accordeonButtonDescriptionInner}>
+          <span className={styles.accordeonButtonDescriptionText}>
+            {description}
+          </span>
         </span>
       </span>
     </button>

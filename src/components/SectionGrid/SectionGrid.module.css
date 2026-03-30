@@ -1,0 +1,25 @@
+.sectionGrid {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 48px 0 0 0;
+  position: relative;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .sectionGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* @media (min-width: 768px) {
+  .sectionGrid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+} */
+
+/* Direct child spans all columns (use when the section is one block on the column grid) */
+.fullSpan {
+  grid-column: 1 / -1;
+}

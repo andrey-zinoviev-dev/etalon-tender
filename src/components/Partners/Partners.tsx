@@ -1,4 +1,5 @@
 import { Container } from "../Container";
+import { SectionGrid } from "../SectionGrid";
 import { SectionTitleWrapper } from "@/components/SectionTitleWrapper/SectionTitleWrapper";
 import styles from "./Partners.module.css";
 
@@ -18,6 +19,7 @@ export default function Partners() {
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
+        <SectionGrid>
         {/* <SectionTitleWrapper
           // className={styles.header}
           descriptorLabel="Партнеры"
@@ -32,6 +34,7 @@ export default function Partners() {
             </div>
           ))}
         </div> */}
+        </SectionGrid>
       </Container>
     </section>
   );

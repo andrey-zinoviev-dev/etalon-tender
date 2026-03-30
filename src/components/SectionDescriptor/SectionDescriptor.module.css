@@ -2,16 +2,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  position: absolute;
+  top: 12px;
+  left: 0;
 }
 
-.sectionDescriptorIcon {
+/* .sectionDescriptorIcon {
   width: 8px;
   height: 8px;
   min-width: 8px;
   min-height: 8px;
   background-color: #4a4a4a;
   flex-shrink: 0;
-}
+} */
 
 .sectionDescriptorLabel {
   font-size: 14px;
