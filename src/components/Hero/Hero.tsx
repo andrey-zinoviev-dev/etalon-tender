@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container/Container";
 import styles from "./Hero.module.css";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -19,9 +20,13 @@ export function Hero() {
         </div>
         <div className={styles.metaRow}>
           <span className={styles.metaEst}>EST. 2012 / MOSCOW</span>
-          <span className={styles.metaScroll}>ПРОКРУТИТЕ ↓</span>
           <span className={styles.metaCoords}>55.7558° N, 37.6173° E</span>
+          <span className={styles.metaScroll}>ПРОКРУТИТЕ ↓</span>
+          
+          <Image className={styles.heroImage} src="/etalon-hero.png" alt="Эталон" width={1000} height={1000} />
+
         </div>
+
       </Container>
     </section>
   );
