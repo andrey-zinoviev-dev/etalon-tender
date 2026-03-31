@@ -10,7 +10,7 @@ export default function Contacts() {
             <Container>
                 <div className={styles.contactsContent}>
                     <SectionGrid>
-                        <SectionDescriptor label="05_CONTACTS" variant="dark" />
+                        <SectionDescriptor label="07_CONTACTS" variant="dark" />
                         <SectionHeading className={styles.headline} title="Контакты" accent="" />
                         <p className={styles.contactsDescription}>Готовы обсудить ваш проект и узнать подробнее о ваших идеях</p>
                         

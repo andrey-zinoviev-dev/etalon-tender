@@ -12,7 +12,7 @@ export default function Projects() {
     <section className={styles.projects}>
       <Container>
         <SectionGrid>
-        <SectionDescriptor label="04_PROJECTS" variant="dark" />
+        <SectionDescriptor label="06_PROJECTS" variant="dark" />
           <SectionHeading className={styles.headline} title="Проекты" accent="" />
           {/* <SectionTitleWrapper
             descriptorLabel="Наши проекты"

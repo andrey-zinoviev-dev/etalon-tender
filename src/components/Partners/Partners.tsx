@@ -19,7 +19,7 @@ export default function Partners() {
     <section className={styles.section}>
       <Container className={styles.container}>
         <SectionGrid>
-          <SectionDescriptor label="05_PARTNERS" variant="dark" />
+          <SectionDescriptor label="04_PARTNERS" variant="dark" />
           <SectionHeading title="Партнеры" accent="" />
           <p className={styles.description}>Мы работаем строго в соответствии с нормами и стандартами, проводим лабораторный контроль качества материалов и работ.</p>
           <ul className={styles.list} aria-label="Заказчики">
