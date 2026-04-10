@@ -6,11 +6,11 @@ import { SectionHeading } from "../SectionHeading";
 import { SectionDescriptor } from "../SectionDescriptor";
 import Image from "next/image";
 const CUSTOMERS = [
-  { id: "01", name: "Sminex", status: "Генподряд / СМР", projects: "4 объекта", logo: "/sminex.jpg" },
-  { id: "02", name: "ГК ВЕКТОР", status: "Генподряд / СМР", projects: "4 объекта", logo: "/vector.svg" },
+  // { id: "01", name: "Sminex", status: "Генподряд / СМР", projects: "4 объекта", logo: "/sminex.jpg" },
+  // { id: "02", name: "ГК ВЕКТОР", status: "Генподряд / СМР", projects: "4 объекта", logo: "/vector.svg" },
   { id: "03", name: "SLOИ", status: "Генподряд / СМР", projects: "4 объекта", logo: "/sloi.webp" },
-  { id: "04", name: "СПЕЦЭЛИТСТРОЙ", status: "Генподряд / СМР", projects: "4 объекта", logo: "/sminex.jpg" },
-  { id: "05", name: "АЛЬФАСТРОЙ ПЛЮС", status: "Генподряд / СМР", projects: "4 объекта", logo: "/alpha.webp" },
+  // { id: "04", name: "СПЕЦЭЛИТСТРОЙ", status: "Генподряд / СМР", projects: "4 объекта", logo: "/sminex.jpg" },
+  // { id: "05", name: "АЛЬФАСТРОЙ ПЛЮС", status: "Генподряд / СМР", projects: "4 объекта", logo: "/alpha.webp" },
   { id: "06", name: "МЕТАЛЛПАТИНА", status: "Генподряд / СМР", projects: "4 объекта", logo: "/sminex.jpg" },
 ];
 
@@ -25,7 +25,7 @@ export default function Partners() {
           <ul className={styles.list} aria-label="Заказчики">
             {CUSTOMERS.map((customer) => (
               <li key={customer.id} className={styles.row}>
-                <span className={styles.index}>{customer.id}</span>
+                {/* <span className={styles.index}>{customer.id}</span> */}
                 <Image className={styles.logo} src={customer.logo} alt={customer.name} width={100} height={100} />
                 {/* <div className={styles.logoSlot} aria-hidden="true" /> */}
                 <span className={styles.companyName}>{customer.name}</span>

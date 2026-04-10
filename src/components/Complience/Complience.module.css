@@ -28,3 +28,39 @@
     grid-template-columns: repeat(4, 1fr);
   }
 } */
+
+
+@media (max-width: 1023px) {
+  .competencesDescription {
+    grid-column: 1 / 7;
+  }
+
+  .competencesList {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding: 96px 0 0 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 48px 0 0 0;
+  }
+  .competencesList {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .competencesDescription {
+    grid-column: 1 / -1;
+  }
+
+  .competencesList {
+    grid-template-columns: 1fr;
+  }
+}

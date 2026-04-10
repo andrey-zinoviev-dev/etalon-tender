@@ -1,6 +1,6 @@
 .contacts {
     /* background-color: #F7F7F7; */
-    padding: 72px 0;
+    padding: 96px 0;
 }
 
 .contactsContent {
@@ -133,6 +133,12 @@
     /* transform: translateY(-1px); */
 }
 
+@media screen and (max-width: 1023px) {
+  .contacts {
+    padding: 48px 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
     .contactsContent {
         gap: 48px;
@@ -145,10 +151,6 @@
 }
 
 @media screen and (max-width: 767px) {
-    .contacts {
-        padding: 72px 0 0 0;
-    }
-
     .contactsDescription {
         grid-column: 1 / -1;
     }
@@ -171,5 +173,17 @@
     .contactsItemContent {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .contactsLinksGrid {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .contactsDescription {
+        grid-column: 1 / 7;
     }
 }

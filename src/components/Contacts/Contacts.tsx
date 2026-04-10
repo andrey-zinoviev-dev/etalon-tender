@@ -34,7 +34,7 @@ export default function Contacts() {
                             </div>
                             <div className={styles.contactsColumn}>
                                 <div className={styles.contactsColumnItem}>
-                                    <span className={styles.contactsItemContentItemTitle}>Офис</span>
+                                    <span className={styles.contactsItemContentItemTitle}>Штаб-квартира</span>
                                     <span>Электрический пер, д. 3/10 стр. 1</span>
                                     <span>Москва, 123557</span>
                                 </div>

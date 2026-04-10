@@ -26,7 +26,7 @@ export function Header() {
             </Link>
           </nav>
           <button className={styles.ctaButton}>
-            Заказать консультацию
+            Связаться с нами
           </button>
 
         {/* <div className={styles.actions}>

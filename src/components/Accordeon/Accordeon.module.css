@@ -12,6 +12,7 @@
   cursor: pointer;
 
   gap: 0;
+  color: black;
 }
 
 .accordeonButtonRow {
@@ -114,5 +115,21 @@
 
   .accordeonButtonIcon {
     transition: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .accordeonButtonRow, .accordeonButtonDescriptionInner {
+    grid-template-columns: 35px 1fr 30px;
+    column-gap: 4px;
+  }
+
+  .accordeonButtonIndex, .accordeonButtonTitle {
+    font-size: 20px;
+    /* grid-column: 2 / 3; */
+  }
+
+  .accordeonButtonDescriptionText {
+    font-size: 16px;
   }
 }

@@ -23,3 +23,9 @@
     padding: 4px 0;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .heading {
+    font-size: 36px;
+  }
+}
