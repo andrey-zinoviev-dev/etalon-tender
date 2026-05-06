@@ -2,6 +2,7 @@ import { Container } from "../Container";
 import { SectionDescriptor } from "../SectionDescriptor";
 import { SectionGrid } from "../SectionGrid";
 import { SectionHeading } from "../SectionHeading";
+import { SectionParagraph } from "../SectionParagraph/SectionParagraph";
 import styles from "./Contacts.module.css";
 
 export default function Contacts() {
@@ -12,7 +13,9 @@ export default function Contacts() {
                     <SectionGrid>
                         <SectionDescriptor label="06_CONTACTS" variant="dark" />
                         <SectionHeading className={styles.headline} title="Контакты" accent="" />
-                        <p className={styles.contactsDescription}>Готовы обсудить ваш проект и узнать подробнее о ваших идеях</p>
+                        <SectionParagraph className={styles.contactsDescription}>
+                            Готовы обсудить ваш проект и узнать подробнее о ваших идеях
+                        </SectionParagraph>
                         
                         <div className={styles.contactsLinksGrid}>
                             <div className={styles.contactsColumn}>

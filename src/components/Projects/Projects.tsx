@@ -26,7 +26,7 @@ export default function Projects() {
               <li className={styles.projectItem} key={project.id}>
                 <div className={styles.projectImageWrapper}>
                   <span className={styles.projectStatus}>{project.status}</span>
-                  <Image className={styles.projectImage} src={project.cover} alt={project.name} width={870} height={500} />
+                  <Image className={styles.projectImage} src={project.image_source} alt={project.title} width={870} height={500} />
                 </div>
                 <div className={styles.projectInfo}>
                   <ul className={styles.projectCategories}>
@@ -35,8 +35,9 @@ export default function Projects() {
                     ))}
                   </ul>
                   <div className={styles.projectInfoContent}>
-                    <h3 className={styles.projectTitle}>{project.name}</h3>
-                    <p className={styles.projectTarget}><span className={styles.projectInfoTitle}>Задача:</span> {project.target}</p>
+                    <h3 className={styles.projectTitle}>{project.title}</h3>
+                    <p className={styles.projectTarget}><span className={styles.projectInfoTitle}>Роль: </span> {project.role}</p>
+                    <p className={styles.projectTarget}><span className={styles.projectInfoTitle}>Компетенции: </span> {project.competencies}</p>
                   </div>
                 </div>
 

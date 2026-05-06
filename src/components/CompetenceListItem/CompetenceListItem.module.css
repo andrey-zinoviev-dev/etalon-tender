@@ -20,7 +20,9 @@
 }
 
 .description {
+  font-size: 18px;
   line-height: 1.5;
+  opacity: 0.5;
   min-height: 72px;
   max-width: 280px;
 }

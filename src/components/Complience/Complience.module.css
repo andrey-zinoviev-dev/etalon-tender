@@ -5,8 +5,6 @@
 
 .competencesDescription {
     grid-column: 8 / -1;
-    font-size: 20px;
-    line-height: 1.5;
 }
 
 .competencesList {
@@ -62,5 +60,14 @@
 
   .competencesList {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
+
+  .competencesList :global(li > h3) {
+    font-size: 24px;
+  }
+}
+
+.competencesList :global(li > span:first-of-type) {
+  font-weight: 500;
 }

@@ -3,6 +3,7 @@ import { SectionDescriptor } from "../SectionDescriptor";
 import { SectionGrid } from "../SectionGrid";
 import { SectionHeading } from "../SectionHeading";
 import { CompetenceListItem } from "../CompetenceListItem";
+import { SectionParagraph } from "../SectionParagraph/SectionParagraph";
 import styles from "./Complience.module.css";
 
 const COMPETENCES = [
@@ -19,7 +20,9 @@ export default function Complience() {
                 <SectionGrid>
                     <SectionDescriptor label="02_COMPLIANCE" variant="dark" />
                     <SectionHeading title="Компетенции" accent="" />
-                    <p className={styles.competencesDescription}>Обеспечиваем юридическую и финансовую чистоту каждого этапа строительства. <br /> Работаем по стандартам комплаенса крупнейших госкорпораций.</p>
+                    <SectionParagraph className={styles.competencesDescription}>
+                        Обеспечиваем юридическую и финансовую чистоту каждого этапа строительства. <br /> Работаем по стандартам комплаенса крупнейших госкорпораций.
+                    </SectionParagraph>
                     <ul className={styles.competencesList}>
                         {COMPETENCES.map((competence) => (
                             <CompetenceListItem

@@ -1,10 +1,12 @@
 export interface Project {
-    id: number;
-    name: string;
-    type: string;
-    cover: string;
-    target: string;
-    status: "В процессе строительства" | "В архиве" | "Завершено";
+    id: string;
+    title: string;
+    role: string;
+    competencies: string;
+    location: string;
+    image_source: string;
+    // target: string;
+    status: "В реализации" | "В архиве" | "Завершено";
     // statusColor: "green" | "red" | "yellow";
     categories: string[];
 }

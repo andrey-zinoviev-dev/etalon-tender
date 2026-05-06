@@ -21,7 +21,7 @@ export default function Home() {
        
         <Complience />
         <ServicesSection />
-        <Partners />
+        {/* <Partners /> */}
         <Projects />
         <Contacts />
       </main>
