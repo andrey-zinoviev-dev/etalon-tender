@@ -1,8 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import styles from "./Header.module.css";
 
 export function Header() {
+  const handleScrollToContacts = () => {
+    document
+      .getElementById("contacts")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className={styles.header}>
       <Container className={styles.inner}>
@@ -25,7 +33,11 @@ export function Header() {
               Контакты
             </Link>
           </nav>
-          <button className={styles.ctaButton}>
+          <button
+            type="button"
+            onClick={handleScrollToContacts}
+            className={styles.ctaButton}
+          >
             Связаться с нами
           </button>
 

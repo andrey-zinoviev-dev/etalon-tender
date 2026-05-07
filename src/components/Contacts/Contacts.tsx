@@ -7,7 +7,7 @@ import styles from "./Contacts.module.css";
 
 export default function Contacts() {
     return (
-        <section className={styles.contacts}>
+        <section id="contacts" className={styles.contacts}>
             <Container>
                 <div className={styles.contactsContent}>
                     <SectionGrid>
@@ -20,19 +20,24 @@ export default function Contacts() {
                         <div className={styles.contactsLinksGrid}>
                             <div className={styles.contactsColumn}>
                                 <div className={styles.contactsColumnItem}>
-                                    <span className={styles.contactsItemContentItemTitle}>Инженерные вопросы</span>
-                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(987)9998038">+7 (987) 999-80-38</a>
-                                    <a className={styles.contactsItemContentItemLink} href="mailto:engineer-ex@etalon-tender.ru">engineer-ex@etalon-tender.ru</a>
-                                </div>
-                                <div className={styles.contactsColumnItem}>
-                                    <span className={styles.contactsItemContentItemTitle}>Срочные вопросы</span>
-                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(987)9998038">+7 (987) 999-80-38</a>
-                                    <a className={styles.contactsItemContentItemLink} href="mailto:emergency-ex@etalon-tender.ru">emergency-ex@etalon-tender.ru</a>
-                                </div>
-                                <div className={styles.contactsColumnItem}>
                                     <span className={styles.contactsItemContentItemTitle}>Общие вопросы</span>
-                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(987)9998039">+7 (987) 999-80-39</a>
-                                    <a className={styles.contactsItemContentItemLink} href="mailto:general-ex@etalon-tender.ru">general-ex@etalon-tender.ru</a>
+                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(928)3065169">+7 (928) 306-51-69</a>
+                                    <a className={styles.contactsItemContentItemLink} href="mailto:s.rud@gk-etalon.com">s.rud@gk-etalon.com</a>
+                                </div>
+                                <div className={styles.contactsColumnItem}>
+                                    <span className={styles.contactsItemContentItemTitle}>Технические вопросы</span>
+                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(921)3596858">+7 (921) 359-68-58</a>
+                                    <a className={styles.contactsItemContentItemLink} href="mailto:p.borodin@gk-etalon.com">p.borodin@gk-etalon.com</a>
+                                </div>
+                                <div className={styles.contactsColumnItem}>
+                                    <span className={styles.contactsItemContentItemTitle}>Контрактация и вопросы по сотрудничеству</span>
+                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(999)8587781">+7 (999) 858-77-81</a>
+                                    <a className={styles.contactsItemContentItemLink} href="mailto:s.kapkov@gk-etalon.com">s.kapkov@gk-etalon.com</a>
+                                </div>
+                                <div className={styles.contactsColumnItem}>
+                                    <span className={styles.contactsItemContentItemTitle}>Тендеры</span>
+                                    <a className={styles.contactsItemContentItemLink} href="tel:+7(987)9998038">+7 (987) 999-80-38</a>
+                                    <a className={styles.contactsItemContentItemLink} href="mailto:a.mozhelov@gk-etalon.com">a.mozhelov@gk-etalon.com</a>
                                 </div>
                             </div>
                             <div className={styles.contactsColumn}>
