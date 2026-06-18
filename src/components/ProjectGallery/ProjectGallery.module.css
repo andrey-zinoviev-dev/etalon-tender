@@ -1,0 +1,310 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.previewDesktop {
+  display: block;
+}
+
+.previewMobile {
+  display: none;
+}
+
+.previewStage {
+  position: relative;
+  width: 100%;
+}
+
+.previewMobileWrap {
+  position: relative;
+  width: 100%;
+}
+
+.mainImageButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.status {
+  position: absolute;
+  z-index: 3;
+  background-color: #fff;
+  padding: 4px 12px;
+  border-radius: 24px;
+  top: 15px;
+  left: 20px;
+  pointer-events: none;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d1d1d1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dotActive {
+  background: #1c1c1c;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 16px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.imageStage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.modalImageDesktop {
+  display: block;
+  width: 100%;
+}
+
+.modalImageMobile {
+  display: none;
+  width: 100%;
+}
+
+.modalTrack {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.modalTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.modalSlide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.modalSlideImage {
+  object-fit: contain;
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1c1c1c;
+  cursor: pointer;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.previewStage:hover .arrow,
+.imageStage:hover .arrow {
+  opacity: 1;
+}
+
+.arrow:hover {
+  background: #fff;
+}
+
+.arrowLeft {
+  left: 12px;
+}
+
+.arrowRight {
+  right: 12px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+.thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbButton {
+  flex: 0 0 auto;
+  position: relative;
+  width: 80px;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.thumbButton:hover {
+  opacity: 0.8;
+}
+
+.thumbActive {
+  opacity: 1;
+  border-color: #fff;
+}
+
+.thumbImage {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .previewDesktop {
+    display: none;
+  }
+
+  .previewMobile {
+    display: block;
+  }
+
+  .modalImageDesktop {
+    display: none;
+  }
+
+  .modalImageMobile {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .thumbButton {
+    width: 64px;
+  }
+}

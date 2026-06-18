@@ -2,7 +2,7 @@ import { Container } from "../Container";
 import { SectionGrid, sectionGrid } from "../SectionGrid";
 // import { SectionTitleWrapper } from "@/components/SectionTitleWrapper";
 import { projects } from "@/utils";
-import Image from "next/image";
+import ProjectGallery from "@/components/ProjectGallery";
 import styles from "./Projects.module.css";
 import { SectionDescriptor } from "../SectionDescriptor";
 import { SectionHeading } from "../SectionHeading";
@@ -24,10 +24,11 @@ export default function Projects() {
           <ul className={[sectionGrid.fullSpan, styles.projectsList].join(" ")}>
             {projects.map((project) => (
               <li className={styles.projectItem} key={project.id}>
-                <div className={styles.projectImageWrapper}>
-                  <span className={styles.projectStatus}>{project.status}</span>
-                  <Image className={styles.projectImage} src={project.image_source} alt={project.title} width={870} height={500} />
-                </div>
+                <ProjectGallery
+                  images={project.images}
+                  alt={project.title}
+                  status={project.status}
+                />
                 <div className={styles.projectInfo}>
                   <ul className={styles.projectCategories}>
                     {project.categories.map((category) => (

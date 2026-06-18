@@ -51,7 +51,7 @@ export const projects: Project[] = [
     "status": "Завершено",
     "role": "Подрядчик по фасадным конструкциям",
     "competencies": "Демонтаж конструкций, антикоррозийная подготовка, порошковая окраска с полимеризацией и монтаж согласно проекту.",
-    "image_source": "/Renome.png"
+    "images": ["/Renome.png", "/arch.png"]
   },
   {
     "id": "ilinka",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     "status": "Завершено",
     "role": "Реставрация и сохранение историко-градостроительной среды",
     "competencies": "Научная реставрация объектов культурного наследия. Надзорная деятельность и реализация проекта совместно с РАХ.",
-    "image_source": "/Ilynka.png"
+    "images": ["/Ilynka.png", "/arch.png"]
   },
   {
     "id": "lavrushinsky",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     "status": "В реализации",
     "role": "Изготовление малых архитектурных форм",
     "competencies": "Производство скульптур и пьедесталов индивидуального исполнения. Коллаборация с заслуженным художником РФ (РАХ).",
-    "image_source": "/Lavrushensky.png"
+    "images": ["/Lavrushensky.png", "/Lui.png"]
   },
   {
     "id": "puskepalis_memorial",
@@ -81,6 +81,6 @@ export const projects: Project[] = [
     "status": "Завершено",
     "role": "Генподрядчик",
     "competencies": "Проектирование и возведение сложного архитектурного объекта (обелиск-часовня). Художественное литье и общестроительные работы.",
-    "image_source": "/chapel.png"
+    "images": ["/chapel.png", "/arch.png"]
   }
 ];

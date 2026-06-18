@@ -28,14 +28,14 @@ export default function Footer() {
                                 <Link href="/">Услуги</Link>
                             </li>
                         </ul>
-                        <ul className={styles.footerMiddleList}>
+                        {/* <ul className={styles.footerMiddleList}>
                             <li className={styles.footerMiddleItem}>
                                 <Link href="/">О компании</Link>
                             </li>
                             <li className={styles.footerMiddleItem}>
                                 <Link href="/">Лицензии и СРО</Link>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                     
                 </div>

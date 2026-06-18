@@ -32,15 +32,10 @@
     grid-column: 6 / -1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
     margin-top: 48px;
-}
-
-.contactsColumn {
-    flex-direction: column;
-    align-items: flex-start;
-    display: flex;
-    gap: 48px;
+    align-items: stretch;
 }
 
 .contactsColumnItem {
@@ -49,6 +44,9 @@
     display: flex;
     gap: 12px;
     width: 100%;
+    height: 100%;
+    grid-row: var(--grid-row);
+    grid-column: var(--grid-column);
 }
 
 .contactsList {
@@ -155,6 +153,12 @@
     .contactsLinksGrid {
         grid-column: 1 / -1;
         grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .contactsColumnItem {
+        grid-row: auto;
+        grid-column: 1;
     }
 
     .contactsItem {

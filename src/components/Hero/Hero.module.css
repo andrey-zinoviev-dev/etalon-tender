@@ -72,7 +72,12 @@
 .metaCoords {
   grid-column: 7 / 9;
   text-align: right;
+  color: inherit;
+  text-decoration: none;
+}
 
+.metaCoords:hover {
+  text-decoration: underline;
 }
 
 .metaScroll {

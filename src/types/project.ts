@@ -4,7 +4,7 @@ export interface Project {
     role: string;
     competencies: string;
     location: string;
-    image_source: string;
+    images: string[];
     // target: string;
     status: "В реализации" | "В архиве" | "Завершено";
     // statusColor: "green" | "red" | "yellow";
