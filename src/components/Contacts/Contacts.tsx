@@ -29,15 +29,6 @@ type ContactBlock = PersonContact | InfoContact;
 const CONTACT_BLOCKS: ContactBlock[] = [
     {
         type: "person",
-        id: "general",
-        title: "Общие вопросы",
-        name: "Рудь Сергей",
-        phone: "+7 (928) 306-51-69",
-        phoneHref: "tel:+7(928)3065169",
-        email: "s.rud@gk-etalon.com",
-    },
-    {
-        type: "person",
         id: "technical",
         title: "Технические вопросы",
         name: "Бородин Петр",
@@ -50,8 +41,8 @@ const CONTACT_BLOCKS: ContactBlock[] = [
         id: "contracting",
         title: "Контрактация и вопросы по сотрудничеству",
         name: "Капков Сергей",
-        phone: "+7 (999) 858-77-81",
-        phoneHref: "tel:+7(999)8587781",
+        phone: "+7 (987) 999-80-38",
+        phoneHref: "tel:+7(987)9998038",
         email: "s.kapkov@gk-etalon.com",
     },
     {
@@ -59,8 +50,8 @@ const CONTACT_BLOCKS: ContactBlock[] = [
         id: "tenders",
         title: "Тендеры",
         name: "Можелов Андрей",
-        phone: "+7 (987) 999-80-38",
-        phoneHref: "tel:+7(987)9998038",
+        phone: "+7 (999) 858-77-81",
+        phoneHref: "tel:+7(999)8587781",
         email: "a.mozhelov@gk-etalon.com",
     },
     {
@@ -85,7 +76,7 @@ function getGridPlacement(block: ContactBlock, blocks: ContactBlock[]) {
     const index = group.indexOf(block);
 
     return {
-        gridRow: index + 1,
+        gridRow: index * 2 + 1,
         gridColumn: isRight ? 2 : 1,
     };
 }
@@ -94,19 +85,21 @@ function ContactBlockItem({ block }: { block: ContactBlock }) {
     return (
         <>
             <h3 className={styles.contactsItemContentItemTitle}>{block.title}</h3>
-            {block.type === "person" ? (
-                <>
-                    <span className={styles.contactsItemContentItemLink}>{block.name}</span>
-                    <a className={styles.contactsItemContentItemLink} href={block.phoneHref}>
-                        {block.phone}
-                    </a>
-                    <a className={styles.contactsItemContentItemLink} href={`mailto:${block.email}`}>
-                        {block.email}
-                    </a>
-                </>
-            ) : (
-                block.lines.map((line) => <span key={line}>{line}</span>)
-            )}
+            <div className={styles.contactsItemBody}>
+                {block.type === "person" ? (
+                    <>
+                        <span className={styles.contactsItemContentItemLink}>{block.name}</span>
+                        <a className={styles.contactsItemContentItemLink} href={block.phoneHref}>
+                            {block.phone}
+                        </a>
+                        <a className={styles.contactsItemContentItemLink} href={`mailto:${block.email}`}>
+                            {block.email}
+                        </a>
+                    </>
+                ) : (
+                    block.lines.map((line) => <span key={line}>{line}</span>)
+                )}
+            </div>
         </>
     );
 }

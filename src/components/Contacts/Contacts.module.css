@@ -33,20 +33,28 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
-    row-gap: 48px;
+    /* 12px between title and body tracks; block spacing via body padding */
+    row-gap: 12px;
     margin-top: 48px;
     align-items: stretch;
 }
 
 .contactsColumnItem {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: var(--grid-row) / span 2;
+    grid-column: var(--grid-column);
+    align-items: start;
+    width: 100%;
+}
+
+.contactsItemBody {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    display: flex;
     gap: 12px;
-    width: 100%;
-    height: 100%;
-    grid-row: var(--grid-row);
-    grid-column: var(--grid-column);
+    /* 12px row-gap + 36px = 48px between visual contact rows */
+    padding-bottom: 36px;
 }
 
 .contactsList {
@@ -108,6 +116,8 @@
     font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
     border-bottom: 1px solid #c1c4c4;
     align-self: stretch;
+    height: 100%;
+    margin: 0;
     padding-bottom: 8px;
     font-weight: 700;
     font-size: 18px;
@@ -153,12 +163,21 @@
     .contactsLinksGrid {
         grid-column: 1 / -1;
         grid-template-columns: 1fr;
+        row-gap: 48px;
         margin: 0;
     }
 
     .contactsColumnItem {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        grid-template-rows: none;
         grid-row: auto;
         grid-column: 1;
+    }
+
+    .contactsItemBody {
+        padding-bottom: 0;
     }
 
     .contactsItem {
